@@ -1,7 +1,13 @@
-function TelaInicial({ onContinuar }) {
+import { useState } from 'react';
+
+import Login from './Login';
+
+function TelaInicial() {
+
+    const [loginAberto, setLoginAberto] = useState(false);
 
     return (
-        <div className="inicio"> {/*usamos classname no jsx porque class é uma palavra reservada no java script*/}
+        <div className="inicio">
 
             <h1>Bem-vindo!</h1>
 
@@ -9,9 +15,13 @@ function TelaInicial({ onContinuar }) {
                 Seja bem-vindo ao CloneX!
             </p>
 
-            <button onClick={onContinuar}>
+            <button onClick={() => setLoginAberto(true)}>
                 Continuar
             </button>
+
+            {loginAberto && (
+                <Login onFechar={() => setLoginAberto(false)} />
+            )}
 
         </div>
     );

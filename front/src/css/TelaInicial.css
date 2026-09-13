@@ -18,16 +18,22 @@
 .inicio button {
     display: block;
     margin: 20px auto 0;
-
     padding: 1rem;
-
     border: none;
-
     background: #0066ff;
-
     color: white;
-
     border-radius: 5px;
-
     cursor: pointer;
+    transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+}
+
+.inicio button:hover {
+    background: #0052cc;
+    box-shadow: 0 4px 10px rgba(0, 82, 204, 0.25);
+    transform: translateY(-2px);
+}
+
+.inicio button:active {
+    box-shadow: none;
+    transform: scale(0.97);
 }
