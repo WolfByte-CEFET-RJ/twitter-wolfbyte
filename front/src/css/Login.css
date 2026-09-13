@@ -1,13 +1,21 @@
-.login {
+dialog {
+    width: min(90vw, 520px);
+    margin: auto;
+    padding: 0;
+    border: 1px solid #808080;
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+dialog::backdrop {
     background: #e7e5e5;
+}
 
-    padding: 40px;
-
-    width: 95%;
-
-    max-width: 400px;
-
-    border-radius: 10px;
+.login {
+    background: #ffffff;
+    padding: 44px;
+    width: 100%;
+    border-radius: 17px;
 }
 
 .login h1 {
@@ -21,36 +29,54 @@
 
 .login input {
     margin-top: 20px;
-
     padding: 12px;
-
-    border: 1px solid #ccc;
-
-    border-radius: 5px;
+    border: 1px solid #727272;
+    border-radius: 8px;
 }
 
 .login button {
     margin-top: 20px;
-
     padding: 12px;
-
-    border: none;
-
+    border: 1px solid #0066ff;
     background: #0066ff;
-
     color: white;
-
-    border-radius: 5px;
-
+    border-radius: 8px;
     cursor: pointer;
+    transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
 }
 
-.login a {
+.login button:hover {
+    background: #0066ff;
+    box-shadow: 0 4px 10px rgba(0, 82, 204, 0.25);
+    transform: translateY(-2px);
+}
+
+.login button:active {
+    box-shadow: none;
+    transform: scale(0.97);
+}
+
+.login .link-formulario {
     display: block;
-
-    text-align: center;
-
-    margin-top: 20px;
-
+    width: fit-content;
+    margin: 12px auto 0;
+    color: #0066ff;
     text-decoration: none;
+}
+
+.login .link-formulario:hover {
+    text-decoration: underline;
+}
+
+.login .botao-fechar {
+    display: block;
+    margin: 20px auto 0;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+}
+
+.login .mensagem-formulario {
+    margin-top: 20px;
+    text-align: center;
+    color: #333;
 }
